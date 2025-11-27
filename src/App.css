@@ -34,36 +34,54 @@ body {
 /* Header */
 .header {
   text-align: center;
-  padding: 3rem 1rem 2.5rem;
-  background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 50%, #0f0f1a 100%);
+  padding: 4rem 2rem 3.5rem;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 50%, rgba(155, 89, 182, 0.1) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 40%),
+    linear-gradient(180deg, #0a0a0f 0%, #12121a 100%);
   border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
 }
 
 .header h1 {
-  font-size: 3.5rem;
+  font-size: clamp(3rem, 8vw, 5rem);
   font-weight: 900;
-  letter-spacing: -0.02em;
-  background: linear-gradient(135deg, var(--accent-gold) 0%, #fff 40%, var(--accent-gold) 80%, #fff 100%);
+  letter-spacing: 0.05em;
+  background: linear-gradient(180deg, #fff 0%, var(--accent-gold) 50%, #b8860b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
+  text-shadow: 0 0 60px rgba(255, 215, 0, 0.3);
+  filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.2));
 }
 
 .tagline {
   color: var(--text-secondary);
-  font-size: 1.25rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /* Main */
 .main {
   flex: 1;
-  padding: 2rem 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 2.5rem 4rem;
   width: 100%;
 }
 
@@ -74,17 +92,17 @@ body {
 
 .input-wrapper {
   display: flex;
-  gap: 0.75rem;
-  max-width: 700px;
+  gap: 1rem;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .address-input {
   flex: 1;
-  padding: 1.1rem 1.5rem;
-  font-size: 1.1rem;
+  padding: 1.25rem 1.75rem;
+  font-size: 1.15rem;
   border: 2px solid var(--border-subtle);
-  border-radius: 12px;
+  border-radius: 14px;
   background: var(--bg-card);
   color: var(--text-primary);
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -93,7 +111,7 @@ body {
 .address-input:focus {
   outline: none;
   border-color: var(--accent-gold);
-  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.15), 0 0 30px rgba(255, 215, 0, 0.1);
 }
 
 .address-input::placeholder {
@@ -101,21 +119,23 @@ body {
 }
 
 .search-btn {
-  padding: 1.1rem 2rem;
-  font-size: 1.1rem;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.15rem;
   font-weight: 700;
   border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent-gold) 0%, #f0c000 100%);
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #e6b800 50%, var(--accent-gold) 100%);
   color: #000;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .search-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
 }
 
 .search-btn:disabled {
@@ -185,8 +205,8 @@ body {
 /* Rep Cards Grid */
 .reps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
 }
 
 .rep-card {
@@ -412,14 +432,29 @@ body {
   display: none;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .main {
+    padding: 2rem;
+  }
+}
+
 /* Mobile Responsive */
 @media (max-width: 600px) {
-  .header h1 {
-    font-size: 1.75rem;
+  .header {
+    padding: 2.5rem 1rem 2rem;
+  }
+
+  .header::before {
+    width: 200px;
   }
 
   .tagline {
-    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+  }
+
+  .main {
+    padding: 1.5rem 1rem;
   }
 
   .input-wrapper {
