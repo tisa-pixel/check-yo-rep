@@ -86,9 +86,12 @@ function App() {
     setError(null)
 
     try {
-      const response = await fetch(
-        `/api/cicero/v3.1/official?search_loc=${encodeURIComponent(address)}&key=${CICERO_API_KEY}`
-      )
+      // Use Vercel serverless function in production, dev proxy locally
+      const apiUrl = import.meta.env.PROD
+        ? `/api/cicero?search_loc=${encodeURIComponent(address)}`
+        : `/api/cicero/v3.1/official?search_loc=${encodeURIComponent(address)}&key=${CICERO_API_KEY}`
+
+      const response = await fetch(apiUrl)
 
       if (!response.ok) {
         throw new Error('Could not find representatives for that address. Double-check it and try again.')
