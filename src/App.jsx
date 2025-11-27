@@ -99,8 +99,8 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>🎤 Who Got My Back?</h1>
-        <p className="tagline">Know your reps. Check your squad.</p>
+        <h1>🎤 Check Yo Rep</h1>
+        <p className="tagline">Know your squad. From City Hall to Capitol Hill.</p>
       </header>
 
       <main className="main">
@@ -214,7 +214,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Built to keep democracy in check 🎤</p>
+        <p>Check Yo Rep - Democracy stays on beat 🎤</p>
         <p className="footer-sub">Data from Google Civic Information API</p>
       </footer>
     </div>

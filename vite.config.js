@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'Who Got My Back?',
-        short_name: 'WhoGotMyBack',
+        name: 'Check Yo Rep',
+        short_name: 'CheckYoRep',
         description: 'Find all your elected representatives by address',
         theme_color: '#0a0a0f',
         background_color: '#0a0a0f',
