@@ -243,7 +243,7 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>🎤 Check Yo Rep</h1>
+        <h1>Check Yo Rep</h1>
         <p className="tagline">Know your squad. From City Hall to Capitol Hill.</p>
       </header>
 
@@ -346,7 +346,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Check Yo Rep - Democracy stays on beat 🎤</p>
+        <p>Check Yo Rep - Democracy stays on beat</p>
         <p className="footer-sub">Data powered by Cicero</p>
       </footer>
     </div>

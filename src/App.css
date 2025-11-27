@@ -34,32 +34,35 @@ body {
 /* Header */
 .header {
   text-align: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+  padding: 3rem 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 50%, #0f0f1a 100%);
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .header h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--accent-gold) 0%, #fff 50%, var(--accent-gold) 100%);
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #fff 40%, var(--accent-gold) 80%, #fff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
 }
 
 .tagline {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 /* Main */
 .main {
   flex: 1;
-  padding: 1.5rem;
-  max-width: 1200px;
+  padding: 2rem 2rem;
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
 }
@@ -72,14 +75,14 @@ body {
 .input-wrapper {
   display: flex;
   gap: 0.75rem;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .address-input {
   flex: 1;
-  padding: 1rem 1.25rem;
-  font-size: 1rem;
+  padding: 1.1rem 1.5rem;
+  font-size: 1.1rem;
   border: 2px solid var(--border-subtle);
   border-radius: 12px;
   background: var(--bg-card);
@@ -98,9 +101,9 @@ body {
 }
 
 .search-btn {
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 1.1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
   border: none;
   border-radius: 12px;
   background: linear-gradient(135deg, var(--accent-gold) 0%, #f0c000 100%);
@@ -182,22 +185,23 @@ body {
 /* Rep Cards Grid */
 .reps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
 }
 
 .rep-card {
   background: var(--bg-card);
   border-radius: 16px;
-  padding: 1.25rem;
+  padding: 1.5rem;
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   border: 2px solid var(--border-subtle);
-  transition: transform 0.2s, border-color 0.2s;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .rep-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .rep-card.party-dem {
@@ -228,16 +232,16 @@ body {
 }
 
 .rep-photo {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--border-subtle);
 }
 
 .rep-photo-placeholder {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent-purple) 0%, #6b5b95 100%);
   display: flex;
@@ -265,16 +269,16 @@ body {
 }
 
 .rep-name {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3rem;
   color: var(--text-primary);
 }
 
 .rep-office {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
 }
 
 .rep-district {
